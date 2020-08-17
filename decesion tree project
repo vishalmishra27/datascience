@@ -44,16 +44,3 @@ print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),
 
 
 
-from sklearn.metrics import confusion_matrix, accuracy_score
-cm = confusion_matrix(y_test,y_pred)
-print(cm)
-accuracy_score(y_test,y_pred)
-
-from sklearn import tree
-fn=['sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)']
-cn=['setosa', 'versicolor', 'virginica']
-fig, axes = plt.subplots(nrows = 1,ncols = 1,figsize = (4,4), dpi=600)
-tree.plot_tree(classifier,
-               feature_names = fn, 
-               class_names=cn,
-               filled = True);
